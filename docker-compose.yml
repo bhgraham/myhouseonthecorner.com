@@ -1,0 +1,31 @@
+# Setup sites for myhouseonthecorner.com.
+
+version: "2"
+services:
+  blog:
+    build: ./blog
+    container_name: blog
+    restart: always
+    volumes:
+      - "blogdata:/var/lib/ghost"
+    ports:
+      - "50001:50001"
+
+  gallery:
+    environment:
+      - GALLERY_TITLE="My House on the Corner photos"
+    build:
+      context: ./gallery
+    container_name: gallery
+    restart: always
+    volumes:
+      - "galleryweb:/fgallery"
+      - "gallerydata:/images:ro"
+    ports:
+      - "50000:80"
+
+volumes:
+  galleryweb:
+  gallerydata:
+  blogdata:
+
