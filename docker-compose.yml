@@ -4,7 +4,6 @@ version: "2"
 services:
   blog:
     build: ./blog
-    container_name: blog
     restart: always
     volumes:
       - "blogdata:/var/lib/ghost"
@@ -16,7 +15,6 @@ services:
       - GALLERY_TITLE="My House on the Corner photos"
     build:
       context: ./gallery
-    container_name: gallery
     restart: always
     volumes:
       - "galleryweb:/fgallery"
@@ -28,4 +26,3 @@ volumes:
   galleryweb:
   gallerydata:
   blogdata:
-

@@ -1,3 +1,7 @@
+refresh:
+	@docker-compose -p myhouseonthecorner pull
+reload:
+	@docker-compose -p myhouseonthecorner up -d --build
 build:
 	@docker-compose -p myhouseonthecorner build 
 run:

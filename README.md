@@ -1,6 +1,14 @@
 # myhouseonthecorner.com
 Docker compose project for myhouseonthecorner.com. Ghost blog, fgallery, with docker volumes.
 
+### Refresh upstram containers.
+
+`make refresh;`
+
+### Rebuild and restart all containers in one step.
+
+`make reload;`
+
 ### Build instructions.
 
 `make build;`
@@ -20,3 +28,4 @@ Docker compose project for myhouseonthecorner.com. Ghost blog, fgallery, with do
 ### Remove dangling images.
 
 `make clean-images;`
+
